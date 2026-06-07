@@ -1,4 +1,6 @@
 import express from "express";
+import "./config/supabase";
+
 const app = express();
 
 app.use(express.json());

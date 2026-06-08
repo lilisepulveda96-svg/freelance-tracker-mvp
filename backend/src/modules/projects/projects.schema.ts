@@ -10,7 +10,10 @@ export const createProjectSchema = z.object({
   hourly_rate: z.number().positive().optional(),
 });
 
-export const updateProjectSchema = createProjectSchema.partial();
+export const updateProjectSchema = createProjectSchema.partial().extend({
+  customer_id: z.string().uuid("Invalid customer ID").nullable().optional(),
+  description: z.string().nullable().optional(),
+});
 
 export type CreateProjectInput = z.infer<typeof createProjectSchema>;
 export type UpdateProjectInput = z.infer<typeof updateProjectSchema>;

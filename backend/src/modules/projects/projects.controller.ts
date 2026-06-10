@@ -9,12 +9,19 @@ export const getProjects = async (
   const userId = req.user!.id;
   const start = Number(req.query._start ?? 0);
   const end = Number(req.query._end ?? 10);
+  const status = req.query.status as string | undefined;
 
-  const { data, error, count } = await supabaseAdmin
+  let query = supabaseAdmin
     .from("projects")
     .select("*", { count: "exact" })
     .eq("user_id", userId)
     .range(start, end - 1);
+
+  if (status) {
+    query = query.eq("status", status);
+  }
+
+  const { data, error, count } = await query;
 
   if (error) {
     res.status(500).json({ error: error.message });

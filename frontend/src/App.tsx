@@ -8,6 +8,10 @@ import { CustomerEdit } from "./resources/customers/CustomerEdit";
 import { ProjectList } from "./resources/projects/ProjectList";
 import { ProjectCreate } from "./resources/projects/ProjectCreate";
 import { ProjectEdit } from "./resources/projects/ProjectEdit";
+import { TrackerPage } from "./resources/time-logs/TrackerPage";
+import TimerIcon from "@mui/icons-material/Timer";
+import PeopleIcon from "@mui/icons-material/People";
+import FolderIcon from "@mui/icons-material/Folder";
 
 function App() {
   return (
@@ -17,13 +21,16 @@ function App() {
         list={CustomerList}
         create={CustomerCreate}
         edit={CustomerEdit}
+        icon={PeopleIcon}
       />
       <Resource
         name="projects"
         list={ProjectList}
         create={ProjectCreate}
         edit={ProjectEdit}
+        icon={FolderIcon}
       />
+      <Resource name="time-logs" list={TrackerPage} icon={TimerIcon} />
     </Admin>
   );
 }

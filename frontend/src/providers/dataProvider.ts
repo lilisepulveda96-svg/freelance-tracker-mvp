@@ -18,6 +18,7 @@ export const dataProvider: DataProvider = {
       params: {
         _start: start,
         _end: end,
+        status: params.filter?.status,
       },
     });
 

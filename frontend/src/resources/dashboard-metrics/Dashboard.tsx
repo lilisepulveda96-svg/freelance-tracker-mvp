@@ -19,6 +19,8 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+import { useTheme } from "@mui/material/styles";
+
 type DashboardMetrics = {
   totalHours: number;
   projectedRevenue: number;
@@ -32,6 +34,7 @@ type DashboardMetrics = {
 export const Dashboard = () => {
   const [data, setData] = useState<DashboardMetrics | null>(null);
   const [loading, setLoading] = useState(true);
+  const theme = useTheme();
 
   useEffect(() => {
     const fetchDashboard = async () => {
@@ -63,10 +66,11 @@ export const Dashboard = () => {
           display: "flex",
           gap: 2,
           mb: 2,
+          alignItems: "stretch",
         }}
       >
         <Box sx={{ flex: "1" }}>
-          <Card>
+          <Card sx={{ height: "100%" }}>
             <CardContent>
               <Typography variant="body2" color="text.secondary">
                 Hours this month
@@ -79,7 +83,7 @@ export const Dashboard = () => {
         </Box>
 
         <Box sx={{ flex: "1" }}>
-          <Card>
+          <Card sx={{ height: "100%" }}>
             <CardContent>
               <Typography variant="body2" color="text.secondary">
                 Projected revenue
@@ -92,7 +96,7 @@ export const Dashboard = () => {
         </Box>
 
         <Box sx={{ flex: "1" }}>
-          <Card>
+          <Card sx={{ height: "100%" }}>
             <CardContent>
               <Typography variant="body2" color="text.secondary">
                 Total clients
@@ -126,7 +130,7 @@ export const Dashboard = () => {
                   <XAxis dataKey="name" />
                   <YAxis />
                   <Tooltip />
-                  <Bar dataKey="hours" fill="#1976d2" />
+                  <Bar dataKey="hours" fill={theme.palette.primary.main} />
                 </BarChart>
               </ResponsiveContainer>
             </CardContent>

@@ -13,6 +13,7 @@ import TimerIcon from "@mui/icons-material/Timer";
 import PeopleIcon from "@mui/icons-material/People";
 import FolderIcon from "@mui/icons-material/Folder";
 import { Dashboard } from "./resources/dashboard-metrics/Dashboard";
+import { darkTheme, lightTheme } from "./theme/theme";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
       authProvider={authProvider}
       dataProvider={dataProvider}
       dashboard={Dashboard}
+      theme={lightTheme}
+      darkTheme={darkTheme}
     >
       <Resource
         name="customers"

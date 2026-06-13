@@ -7,7 +7,6 @@ import {
   Typography,
   Box,
   CircularProgress,
-  Grid,
 } from "@mui/material";
 
 import {

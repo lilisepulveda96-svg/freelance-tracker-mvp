@@ -1,5 +1,4 @@
 import { Admin, Resource } from "react-admin";
-import "./App.css";
 import { authProvider } from "./providers/authProvider";
 import { dataProvider } from "./providers/dataProvider";
 import { CustomerList } from "./resources/customers/CustomerList";

@@ -10,7 +10,7 @@ architecture patterns using React Admin, Node.js and Supabase.
 
 ## 🚀 Live Demo
 
-**URL:** `https://your-deployment-url.com`
+**URL:** `https://freelance-tracker-mvp-five.vercel.app`
 
 | Field    | Value                       |
 | -------- | --------------------------- |

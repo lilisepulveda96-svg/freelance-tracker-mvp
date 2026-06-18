@@ -10,7 +10,10 @@ architecture patterns using React Admin, Node.js and Supabase.
 
 ## 🚀 Live Demo
 
-**URL:** `https://freelance-tracker-mvp-five.vercel.app`
+| Environment                 | URL                                             |
+| --------------------------- | ----------------------------------------------- |
+| **Production**              | `https://freelance-tracker-mvp-five.vercel.app` |
+| **Preproduction (Staging)** | _(Vercel automatic preview deployment)_         |
 
 | Field    | Value                       |
 | -------- | --------------------------- |

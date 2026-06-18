@@ -10,12 +10,19 @@ architecture patterns using React Admin, Node.js and Supabase.
 
 ## 🚀 Live Demo
 
-**URL:** `https://freelance-tracker-mvp-five.vercel.app`
+> **Architecture Note:** In a corporate enterprise production environment, the Preproduction (Staging) URL would typically be restricted behind a VPN or Deployment Protection (Vercel Authentication). For portfolio demonstration and quick recruiting review purposes, protection has been bypassed on this preview branch.
 
-| Field    | Value                       |
-| -------- | --------------------------- |
-| Email    | `demo@freelancetracker.com` |
-| Password | `Demo1234!`                 |
+| Environment                 | URL                                                                                               |
+| --------------------------- | ------------------------------------------------------------------------------------------------- |
+| **Production**              | [Live App](https://freelance-tracker-mvp-five.vercel.app)                                         |
+| **Preproduction (Staging)** | [Staging App](https://freelance-tracker-mvp-git-develop-lilibeth-sepulveda-s-projects.vercel.app) |
+
+> Use these credentials to explore the platform without needing to register a new account.
+
+| Field        | Production Account          | Preproduction Account (Staging)  |
+| :----------- | :-------------------------- | :------------------------------- |
+| **Email**    | `demo@freelancetracker.com` | `qa.tester@freelancetracker.com` |
+| **Password** | `Demo1234!`                 | `StagingTest123!`                |
 
 > The demo account is pre-loaded with sample clients, projects and time logs.
 
